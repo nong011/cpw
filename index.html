@@ -118,7 +118,7 @@
     google.charts.setOnLoadCallback(init);
 
     const SHEET_ID = '1E358SHV4KHcR5vDy0R0qfbGwK2EXuUJE97wUeEd5sWg';
-    const SHEETS = ['Sheet4', 'Sheet5', 'Sheet6'];
+    const SHEETS = ['Sheet1', 'Sheet2', 'Sheet3'];
     let fullDataBySheet = {};
     let currentRange = 1;
 
@@ -168,9 +168,9 @@
       gaugeContainer.innerHTML = '';
 
       const boxColors = {
-        Sheet4: '#FFB6B9',
-        Sheet5: '#A5D8FF',
-        Sheet6: '#C3FBA6'
+        Sheet1: '#FFB6B9',
+        Sheet2: '#A5D8FF',
+        Sheet3: '#C3FBA6'
       };
 
       SHEETS.forEach(sheet => {
