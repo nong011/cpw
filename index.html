@@ -201,6 +201,18 @@
         wrapper.appendChild(gaugeDiv);
         wrapper.appendChild(time);
 
+        // สถานะ Online / Offline
+        const status = document.createElement('div');
+        status.className = 'gauge-time';
+        const now = new Date();
+        const minutesDiff = (now - lastData.time) / 60000;
+        if (minutesDiff <= 6) {
+          status.innerHTML = '<span style="color:green; font-weight:bold;">🟢 Online</span>';
+        } else {
+          status.innerHTML = '<span style="color:red; font-weight:bold;">🔴 Offline</span>';
+        }
+        wrapper.appendChild(status);
+
         gaugeContainer.appendChild(wrapper);
 
         const data = google.visualization.arrayToDataTable([
